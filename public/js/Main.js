@@ -15,6 +15,7 @@ initDrawing();
 //
 function startOPTLoop(){
     // should not reset the state of the system
+    hideGraph();
     PAUSECONSTANT=PAUSEAFTERNUMITR+COUNTER;
     STARTRANDOM=false;
     OPTSWITCH=setInterval(optLoop, FPS);
@@ -50,7 +51,7 @@ function stopOPTLoop(){
     console.log(TRACK_SCORE);
     console.log("\n\n-----------CONSTRAINT COUNTER DETAILS -----------------------");
     console.log(CONSTRAINT_COUNTER_DETAILS);
-    document.getElementById("process").innerHTML="Optimization Loops Running: false\nGraph Display: true";
+    document.getElementById("process").innerHTML="Graph Display: true";
     drawGraph();   
 }
 
