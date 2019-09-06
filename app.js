@@ -11,10 +11,10 @@ app.engine('handlebars', exphbs({
 app.set('view engine', 'handlebars');
 
 app.get('/',(req, res)=>{
-    res.render("/index");
+    res.render("index");
 });
 
-var port=5000 || process.env.PORT;
+const port=process.env.PORT || 5000;
 app.listen(port, ()=>{
-    console.log(`server listening on port ${port}`);
+    console.log(`server started on port ${port}`);
 });
