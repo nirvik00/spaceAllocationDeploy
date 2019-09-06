@@ -1,17 +1,22 @@
-<h1> Artificial Intelligence for Space Allocation </h1>
-<a href="https://ai4dots.herokuapp.com/"  target="_blank">Illustration of Deep Neural Networks for strategy</a>
-<a href="https://github.com/nirvik00/DOTS" target="_blank">Get the Architecture and Planning Plugin for Grasshopper in Rhino3d</a>
+
+<h2 id="pagetitle"> Artificial Intelligence for Space Allocation </h2><br>
+
+<div id="infotop">
+    <a href="https://ai4dots.herokuapp.com/"  target="_blank">Illustration of Deep Neural Networks for strategy</a>
+    <a href="https://github.com/nirvik00/DOTS" style="margin-left:25px"target="_blank">Get the Architecture and Planning Plugin for Grasshopper in Rhino3d</a>
+</div>
+
 
 <div id="buttondiv">
     <button value="Submit" onclick="startOPTLoop()"> START OPTIMIZATION </button>
-    <button value="Submit" onclick="startRandom()"> RANDOMIZE & START </button>
+    <button value="Submit" onclick="startRandom()"> RANDOMIZE </button>
     <button value="Submit" onclick="stopOPTLoop()"> PAUSE & ANALYZE - GRAPHS </button>
     <button value="Submit" onclick="resetSys()"> RESET SYSTEM </button>
     <button value="Submit" onclick="openDataControls()"> SET CONSTRAINTS </button>
 </div>
 
 <div id="drawing">
-    <canvas id="OPTCANVAS" width="750" height="400"></canvas>
+    <canvas id="OPTCANVAS" width="750" height="375"></canvas>
 </div>
 
 <div id="info">
@@ -22,7 +27,8 @@
         <p id="randomStart"></p>
         <p id="timeElapsed"></p>
         <p id="process"></p>
-</div>  
+</div>      
+
 
 <div id="editDiv">
     <table id="editTable"></table>

@@ -71,7 +71,7 @@ function startRandom(){
     STARTRANDOM=true;
     initSys(true);
     initDrawing();
-    OPTSWITCH=setInterval(optLoop, 10);
+    /// OPTSWITCH=setInterval(optLoop, 10);
 }
 //
 //
