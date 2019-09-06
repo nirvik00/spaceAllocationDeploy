@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Space Allocation</title>
+
+    <script src="/public/js/globalVars.js";></script>
+	<script src="/public/js/libs/Chart.min.js"></script>
+
+    <style>
+	canvas {
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+	}
+	</style>
+
+    <style>
+        #OPTCANVAS{
+            /* border: 1px solid black;*/
+            position: relative;
+            margin-left:1%;
+            background-color: rgb(255,255,255);
+        }
+        #info{
+            position:relative;
+            margin-left:7%;
+            overflow: hidden;
+            color:black;
+            font-size: 10px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight:normal;
+            text-indent:0%;
+        }
+        #buttondiv{
+            position:relative;
+            left:5%;
+        }
+        h1{
+            position:relative;
+            left: 5%;
+        }
+        button{
+            background-color: rgb(148, 148, 148); /* Green */
+            border:5px black;
+            color: white;
+            padding: 10px 12px;
+            text-align: center;
+            text-decoration:chocolate;
+            display: inline-block;
+            font-size: 10px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        button:hover{
+            background-color:black;
+        }
+        #editDiv{
+            position:absolute;
+            border-width:1px;
+            top:15%;
+            left:0%;
+            padding:10px;
+            background-color:rgb(255,255,255);
+            overflow:auto;
+            display:none;
+            color:red;
+            opacity:0.85;
+            z-index:10;
+        }
+        #floatingDiv{
+            position:absolute;
+            border-width:1px;
+            top:15%;
+            left:0%;
+            padding:10px;
+            background-color: rgb(255,255,255);
+            overflow: auto;
+            display:none;
+            color:red;
+            opacity:0.75;
+            z-index:10;
+        }
+        #editTable{
+            margin-top:12px;
+        }
+        .dynamicCells{
+            font-size:12px;
+            text-align:center;
+            background-color:rgba(255,255,255,1.0);
+            color:black;
+            padding:10px;
+        }
+        #endLoop{
+            position:absolute;
+            border-width:1px;
+            top:25%;
+            left:8%;
+            padding:10px;
+            background-color:rgb(255,255,255);
+            overflow:auto;
+            display:none;
+            color:black;
+            font-size:12px;
+            font-weight:normal;
+            opacity:0.90;
+            z-index:10;
+        }
+        #graphDiv{
+            position: relative;
+            left:5%;
+            border:none;
+            display:none;
+            margin-bottom:35px;
+            width:70%;
+        }
+        #graphTitle{
+            color:black;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight:bold;
+            font-size: 15px;
+            margin-bottom:25px;
+            margin-left:7%;
+        }
+    </style>
+</head>
+
+<body>
+    {{{body}}}
+   
+</body>
+</html>

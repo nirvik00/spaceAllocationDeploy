@@ -1,0 +1,54 @@
+<h1> Artificial Intelligence for Space Allocation </h1>
+<div id="buttondiv">
+    <button value="Submit" onclick="startOPTLoop()"> START OPTIMIZATION </button>
+    <button value="Submit" onclick="startRandom()"> RANDOMIZE & START </button>
+    <button value="Submit" onclick="stopOPTLoop()"> STOP & ANALYZE - GRAPHS </button>
+    <button value="Submit" onclick="resetSys()"> RESET SYSTEM </button>
+    <button value="Submit" onclick="openDataControls()"> SET CONSTRAINTS </button>
+</div>
+
+<div id="drawing">
+    <canvas id="OPTCANVAS" width="750" height="400"></canvas>
+</div>
+
+<div id="info">
+        <p id="itrCounter"></p>
+        <p id="bestString"></p>
+        <p id="bestScore"></p>
+        <p id="bestScoreCounter"></p>
+        <p id="randomStart"></p>
+        <p id="timeElapsed"></p>
+</div>  
+
+<div id="editDiv">
+    <table id="editTable"></table>
+</div>
+
+<div id="graphDiv">
+    <canvas id="graphScoreCounter"></canvas>
+    <p id="graphTitle">Graph 1 : { layout-score } x { cardinal-score ; adjacency-score }</p>
+    <canvas id="graphDiffScoreCounter"></canvas>
+    <p id="graphTitle">Graph 2 :  rate of change { layout-score } x { cardinal-score ; adjacency-score }</p>
+    <canvas id="graphScoreConfigCounter"></canvas>
+    <p id="graphTitle">Graph 3 :  { layout-score } x { space-allocation }</p>
+    <canvas id="graphDiffScoreConfigCounter"></canvas>
+    <p id="graphTitle">Graph 4 : rate of change  { layout-score } x { space-allocation }</p>
+
+</div>
+<!--
+<script src="./js/infoGraph.js"></script>
+-->
+<script src="/public/js/GraphData.js"></script>
+<script src="/public/js/GenerateTable.js"></script>
+<script src="/public/js/Scoring.js"></script>
+<script src="/public/js/Objects.js"></script>
+<script src="/public/js/Cell.js"></script>
+<script src="/public/js/Utils.js"></script>
+<script src="/public/js/OptimizationLoop.js"></script>
+<script src="/public/js/Main.js"></script>
+<script src="/public/js/AnalysisGraph.js"></script>
+
+<div id="endLoop">
+    <p id="endstatement"></p>
+    </p>
+</div>
