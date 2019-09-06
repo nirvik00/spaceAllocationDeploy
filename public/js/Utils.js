@@ -183,6 +183,7 @@ function displayInfo(){
         var timeElapsed=ENDTIME-STARTTIME;
         document.getElementById("timeElapsed").innerHTML="Time Elapsed: " +timeElapsed +" milliseconds";
     }
+    document.getElementById("process").innerHTML="Optimization Loops Running: true\nGraph Display: false";
 }
 //
 //

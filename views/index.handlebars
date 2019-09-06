@@ -1,8 +1,11 @@
 <h1> Artificial Intelligence for Space Allocation </h1>
+<a href="https://ai4dots.herokuapp.com/"  target="_blank">Illustration of Deep Neural Networks for strategy</a>
+<a href="https://github.com/nirvik00/DOTS" target="_blank">Get the Architecture and Planning Plugin for Grasshopper in Rhino3d</a>
+
 <div id="buttondiv">
     <button value="Submit" onclick="startOPTLoop()"> START OPTIMIZATION </button>
     <button value="Submit" onclick="startRandom()"> RANDOMIZE & START </button>
-    <button value="Submit" onclick="stopOPTLoop()"> STOP & ANALYZE - GRAPHS </button>
+    <button value="Submit" onclick="stopOPTLoop()"> PAUSE & ANALYZE - GRAPHS </button>
     <button value="Submit" onclick="resetSys()"> RESET SYSTEM </button>
     <button value="Submit" onclick="openDataControls()"> SET CONSTRAINTS </button>
 </div>
@@ -18,6 +21,7 @@
         <p id="bestScoreCounter"></p>
         <p id="randomStart"></p>
         <p id="timeElapsed"></p>
+        <p id="process"></p>
 </div>  
 
 <div id="editDiv">
@@ -33,7 +37,6 @@
     <p id="graphTitle">Graph 3 :  { layout-score } x { space-allocation }</p>
     <canvas id="graphDiffScoreConfigCounter"></canvas>
     <p id="graphTitle">Graph 4 : rate of change  { layout-score } x { space-allocation }</p>
-
 </div>
 <!--
 <script src="./js/infoGraph.js"></script>

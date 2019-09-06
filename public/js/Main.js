@@ -18,8 +18,6 @@ function startOPTLoop(){
     PAUSECONSTANT=PAUSEAFTERNUMITR+COUNTER;
     STARTRANDOM=false;
     OPTSWITCH=setInterval(optLoop, FPS);
-
-
 }
 //
 //
@@ -52,7 +50,7 @@ function stopOPTLoop(){
     console.log(TRACK_SCORE);
     console.log("\n\n-----------CONSTRAINT COUNTER DETAILS -----------------------");
     console.log(CONSTRAINT_COUNTER_DETAILS);
-
+    document.getElementById("process").innerHTML="Optimization Loops Running: false\nGraph Display: true";
     drawGraph();   
 }
 
