@@ -1,5 +1,13 @@
-//
-//
+// generate tables file to take current data display it 
+// functions in tile
+// 1. generateTable
+// 2. getAdjValOfSpace
+// 3. generateTableVals
+// 4. getCellVal
+// 5. getAdjCellVal
+// 6. updateDataFromTable
+// 7. genAdjRelFromSpaceNames
+// 8. checkDoubleAdjRel
 //
 function generateTable(tblname, tdclass){
     let tbl=document.getElementById(tblname);
@@ -106,10 +114,13 @@ function generateTable(tblname, tdclass){
     return tbl;
 }
 
+
+
 // take the space object, and the name {"a"-"g"} from cells 
 // check if space object name === ADJREL[i].spaceA or B name 
 // check if name from cell === other ADJREL[i].space B or A name
 // get the val and return the value
+
 function getAdjValOfSpace(space, name){
     let val=0.0;
     for(let i=0; i<ADJREL.length; i++){
@@ -214,7 +225,7 @@ function generateTableVals(reqSpace, tdclass){
     let tdnum=document.createElement("td");
     tdnum.innerHTML=reqSpace.num;
     tdnum.className=tdclass;
-    tdnum.contentEditable="true";
+    tdnum.contentEditable="false";
 
     trI.appendChild(tdname);
     trI.appendChild(tda);
@@ -247,7 +258,6 @@ function getCellVal(t){
     }
     return val;
 }
-
 
 function getAdjCellVal(space, a, b, c, d, e, f, g){
     var rel=[];
