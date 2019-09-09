@@ -276,6 +276,7 @@ function updateDataFromTable(){
     clearAllGlobalParams();
 
     var adjrel=[];
+    var allnums=0.0;
 
     let tbl=document.getElementById("editTable");
     for(var i=1; i<tbl.rows.length; i++){
@@ -298,6 +299,7 @@ function updateDataFromTable(){
         var ea=getCellVal(cols.item(14));
         var ne=getCellVal(cols.item(15));
         var num=getCellVal(cols.item(16));
+        allnums+=num;
         
         var dir={"No":no, "NW":nw, "We":we, "SW":sw, "So":so, "SE":se, "Ea":ea, "NE":ne};
 
@@ -352,6 +354,11 @@ function updateDataFromTable(){
     }
     
     setDefaultNumbers();
+
+    if(allnums!=52){
+        document.getElementById("sysmsg").innerHTML="sum of nums is not 52. default numbers are set";
+        setDefaultNumbers();
+    }
 
     // at this point spaces have been correctly defined
     // construct adj relationship by taking string names
