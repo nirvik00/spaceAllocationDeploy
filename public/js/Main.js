@@ -18,6 +18,7 @@ function startOPTLoop(){
     hideGraph();
     PAUSECONSTANT=PAUSEAFTERNUMITR+COUNTER;
     STARTRANDOM=false;
+    document.getElementById("sysmsg").innerHTML="running optimization loops";
     OPTSWITCH=setInterval(optLoop, FPS);
 }
 //
@@ -29,6 +30,7 @@ function drawGraph(){
     drawGraphs_Diff_Counter_Score_Breakdown();
     drawGraphs_Counter_Score_Config();
     drawGraphs_Diff_Counter_Score_Config();
+    document.getElementById("sysmsg").innerHTML="";
 }
 
 function hideGraph(){
@@ -64,6 +66,7 @@ function resetSys(){
     initSys(false);
     clearInterval(OPTSWITCH);
     document.getElementById('graphDiv').style.display='none';
+    document.getElementById("sysmsg").innerHTML="system reset";
 }
 //
 //
@@ -73,15 +76,18 @@ function startRandom(){
     initSys(true);
     initDrawing();
     /// OPTSWITCH=setInterval(optLoop, 10);
+    document.getElementById("sysmsg").innerHTML="system stated set to random";
 }
 //
 //
 function openDataControls(){
+    resetSys();
     let ele=document.getElementById("editDiv");
     let tbl=generateTable("editTable", "dynamicCells");
     ele.style.display="block";
     ele.appendChild(tbl);
     addButtons(ele);
+    document.getElementById("sysmsg").innerHTML="user data controls opened";
 }
 //
 //

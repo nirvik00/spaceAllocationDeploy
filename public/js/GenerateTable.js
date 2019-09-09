@@ -1,13 +1,5 @@
-// generate tables file to take current data display it 
-// functions in tile
-// 1. generateTable
-// 2. getAdjValOfSpace
-// 3. generateTableVals
-// 4. getCellVal
-// 5. getAdjCellVal
-// 6. updateDataFromTable
-// 7. genAdjRelFromSpaceNames
-// 8. checkDoubleAdjRel
+//
+//
 //
 function generateTable(tblname, tdclass){
     let tbl=document.getElementById(tblname);
@@ -114,13 +106,10 @@ function generateTable(tblname, tdclass){
     return tbl;
 }
 
-
-
 // take the space object, and the name {"a"-"g"} from cells 
 // check if space object name === ADJREL[i].spaceA or B name 
 // check if name from cell === other ADJREL[i].space B or A name
 // get the val and return the value
-
 function getAdjValOfSpace(space, name){
     let val=0.0;
     for(let i=0; i<ADJREL.length; i++){
@@ -259,6 +248,7 @@ function getCellVal(t){
     return val;
 }
 
+
 function getAdjCellVal(space, a, b, c, d, e, f, g){
     var rel=[];
     if(a!==0) rel.push([space.name, "a", a]);
@@ -276,8 +266,7 @@ function updateDataFromTable(){
     clearAllGlobalParams();
 
     var adjrel=[];
-    var allnums=0.0;
-
+    var allnums=0;
     let tbl=document.getElementById("editTable");
     for(var i=1; i<tbl.rows.length; i++){
         var cols=tbl.rows.item(i).cells;
@@ -299,8 +288,8 @@ function updateDataFromTable(){
         var ea=getCellVal(cols.item(14));
         var ne=getCellVal(cols.item(15));
         var num=getCellVal(cols.item(16));
-        allnums+=num;
-        
+        allnums+=parseFloat(num);
+
         var dir={"No":no, "NW":nw, "We":we, "SW":sw, "So":so, "SE":se, "Ea":ea, "NE":ne};
 
         // dummy values to build adj relations
@@ -341,19 +330,6 @@ function updateDataFromTable(){
         }
         SPACES.push(space);
     }
-    if(allnums!=52){
-        document.getElementById("sysmsg").innerHTML="sum of nums is not 52. default numbers are set";
-        for (var i=0; i<SPACES.length; i++){
-            if(i<SPACES.length-1){
-                SPACES[i].num=7;
-            } 
-            else{
-                SPACES[i].num=10;
-            } 
-        }
-    }
-    
-    setDefaultNumbers();
 
     if(allnums!=52){
         document.getElementById("sysmsg").innerHTML="sum of nums is not 52. default numbers are set";
@@ -378,6 +354,7 @@ function setDefaultNumbers(){
             cols.item(16).innerHTML=10;
         }
     }
+    updateDataFromTable();
 }
 
 function genAdjRelFromSpaceNames(adjrel){
