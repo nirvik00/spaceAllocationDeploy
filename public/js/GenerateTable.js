@@ -225,7 +225,7 @@ function generateTableVals(reqSpace, tdclass){
     let tdnum=document.createElement("td");
     tdnum.innerHTML=reqSpace.num;
     tdnum.className=tdclass;
-    tdnum.contentEditable="false";
+    tdnum.contentEditable="true";
 
     trI.appendChild(tdname);
     trI.appendChild(tda);
@@ -339,12 +339,38 @@ function updateDataFromTable(){
         }
         SPACES.push(space);
     }
+    if(allnums!=52){
+        document.getElementById("sysmsg").innerHTML="sum of nums is not 52. default numbers are set";
+        for (var i=0; i<SPACES.length; i++){
+            if(i<SPACES.length-1){
+                SPACES[i].num=7;
+            } 
+            else{
+                SPACES[i].num=10;
+            } 
+        }
+    }
+    
+    setDefaultNumbers();
+
     // at this point spaces have been correctly defined
     // construct adj relationship by taking string names
     // check and define adj rel with space object
     ADJREL=genAdjRelFromSpaceNames(adjrel);
 
     initSys(false);
+}
+
+function setDefaultNumbers(){
+    let tbl=document.getElementById("editTable");
+    for(var i=1; i<tbl.rows.length; i++){
+        var cols=tbl.rows.item(i).cells;
+        if(i<tbl.rows.length-1){
+            cols.item(16).innerHTML=7;
+        }else{
+            cols.item(16).innerHTML=10;
+        }
+    }
 }
 
 function genAdjRelFromSpaceNames(adjrel){
