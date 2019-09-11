@@ -6,6 +6,17 @@
     <a href="https://github.com/nirvik00/DOTS" style="margin-left:25px"target="_blank">Get the Architecture and Planning Plugin for Grasshopper in Rhino3d</a>
 </div>
 
+<ul style="margin-left:3%;">
+    <li>Optimize for <b><i>adjacency</i></b> and <b><i>direction</i></b> of each space. </li>
+    <li>Attraction or repulsion to other spaces or a direction can be set by +ve / -ve numbers.</li>
+    <li>Considerations:
+        <ul> 
+            <li> O(n): Directions of each cell { North, South, East, West, North-East, North-West, South, South-East }</li>
+            <li> O(n<sup>2</sup>): Adjacency between spaces</li>
+        </ul>
+    </li>
+    <li>From this information, the algorithm will determine the best arrangement of spaces.</li>
+</ul> 
 
 <div id="buttondiv">
     <button value="Submit" onclick="startOPTLoop()"> START OPTIMIZATION </button>
