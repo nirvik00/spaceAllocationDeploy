@@ -155,7 +155,7 @@ function formatDataGraphs() {
 		labels: DATA_COUNTER,
 		datasets: [
 			{
-				label: 'layout-score',
+				label: 'layout score',
 				borderColor: 'rgba(200,0,0,1.0)',
 				backgroundColor: 'rgba(200,0,0,1.0)',
 				fill: false,
@@ -163,7 +163,7 @@ function formatDataGraphs() {
 				yAxisID: 'y-axis-1',
 			},
 			{
-				label: 'space-allocation',
+				label: 'space-allocation score',
 				borderColor: 'rgba(0,200,200,1.0)',
 				backgroundColor: 'rgba(0,200,200,1.0)',
 				fill: false,
